@@ -1,26 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* background: var(--background);
+  color: var(--foreground); */
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family:Inter;
+}
+nav{
+  display:flex;
+  justify-content: space-between;
+  width:100%;
+  max-width:1200px;
+  margin: 0 auto;
+  padding: 20px 15px;
+  position:relative;
+}
+.hero{
+  width:100%;
+  height:500px;
+  
+  background:linear-gradient(to right, rgba(0, 0, 0, 0.699)),url('/doctorsmall.png');
+  background-size:cover;
+  background-position:center;
+  /* background:yellow; */
+}
+
+.hero h2{
+  font-family: Outfit;
+  max-width:60%;
+}
+
+.hero p{
+  color: rgb(216, 216, 216);
+  max-width:60%;
+}
+
+.herobutton{
+  padding:10px 15px;
+  background:#04508D;
+  margin-top:18px;
+  display:inline-block; 
+  border-radius:10px;
+  color:white;
+  font-size:smaller;
+}
+
+.alt-color{
+  color:#04508D
+}
+.max-width{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+.navlinks{
+  display:flex;
+  flex-direction:row;
+  /* margin-right:100px; */
+  /* background: yellow; */
+  justify-content:flex-end;
+  padding: 10px 0px;
+  font-weight:25px;
+  
+}
+.active{
+  color:#3988C7;
+  border-bottom: 3px solid#3988C7;
+}
+.navlinks li{
+  margin-right:40px;
+}
+
+.navlinks_mob{
+  display:none;
+}
+
+
+.hamburger_menu{
+  display:none;
+}
+
+
+/** For tablet devices **/
+
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .navlinks{
+    display:none ;
+  }
+ 
+}
+
+/* @media (min-width: 768px) and (max-width: 1025px) { */
+@media (max-width: 1025px) {
+  .hamburger_menu{
+    display:flex;
+  }
+
+ 
+  .navlinks{
+    display:none;
+  }
+
+  .hero h2{
+    font-size:27px !important;
+    max-width:100%;
+    padding-top:0; 
+  }
+
+  .hero p{
+    max-width:100%;
+    font-size:12px;
+  }
+
+   .navlinks_mob{
+    display:flex;
+    align-items: center;
+    flex-direction:column;
+    background:white;
+    padding:40px 40px;
+    position:absolute;
+    inset:0;
+    max-width:100%;
+    height:100vh;
+    z-index:20;
+    top:93px;
+  }
+  .navlinks_mob li{
+    padding:20px 100%;
+    display:flex;
+  }
+ .remove{
+    display:none !important;
+  }
+
+  .show{
+    display:flex !important;
+  }
 }

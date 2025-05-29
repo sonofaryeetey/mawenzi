@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-@import "tailwindcss";
+  /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap'); */
+  @import "tailwindcss";
 
 
-/* * {
+  /* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -11,382 +11,386 @@
 
 
 
-body {
-  /* background: var(--background);
+  body {
+    /* background: var(--background);
   color: var(--foreground); */
-  /* font-family: Arial, Helvetica, sans-serif; */
-  font-family: Inter;
-}
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: var(--font-inter), sans-serif;
+  }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px 15px;
-  position: relative;
-}
+  nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 15px;
+    position: relative;
+  }
 
-.hero {
-  width: 100%;
-  height: 500px;
+  .hero {
+    width: 100%;
+    height: 500px;
 
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.699)), url('/doctorsmall.png');
-  background-size: cover;
-  background-position: center;
-  /* background:yellow; */
-}
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.699)), url('/doctorsmall.png');
+    background-size: cover;
+    background-position: center;
+    /* background:yellow; */
+  }
 
-.hero h2 {
-  font-family: Outfit;
-  max-width: 60%;
-}
+  .hero h2 {
+    /* font-family: Outfit; */
+    font-family: var(--font-outfit), sans-serif;
+    max-width: 60%;
+  }
 
-.hero p {
-  color: rgb(216, 216, 216);
-  max-width: 60%;
-}
+  .hero p {
+    color: rgb(216, 216, 216);
+    max-width: 60%;
+  }
 
-.herobutton {
-  padding: 10px 15px;
-  background: #04508D;
-  margin-top: 18px;
-  display: inline-block;
-  border-radius: 10px;
-  color: white;
-  font-size: smaller;
-}
+  .herobutton {
+    padding: 10px 15px;
+    background: #04508D;
+    margin-top: 18px;
+    display: inline-block;
+    border-radius: 10px;
+    color: white;
+    font-size: smaller;
+  }
 
-.alt-color {
-  color: #04508D
-}
+  .alt-color {
+    color: #04508D
+  }
 
-.para {
-  width: 80%;
-  text-align: center;
-  margin: 0 auto;
-  font-weight: 100;
-  font-size: 15px;
-}
+  .para {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 300;
+    font-size: 15px;
+  }
 
-.max-width {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 50px 20px;
-}
+  .max-width {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+  }
 
-.navlinks {
-  display: flex;
-  flex-direction: row;
-  /* margin-right:100px; */
-  /* background: yellow; */
-  justify-content: flex-end;
-  padding: 10px 0px;
-  font-weight: 25px;
-
-}
-
-.underliner {
-  margin: 0 auto;
-  padding-top: 2px;
-}
-
-.active {
-  color: #3988C7;
-  border-bottom: 3px solid#3988C7;
-}
-
-.navlinks li {
-  margin-right: 40px;
-}
-
-.navlinks_mob {
-  display: none;
-}
-
-
-.hamburger_menu {
-  display: none;
-}
-
-.card-container {
-  display: flex;
-  margin: 0 auto;
-  margin-top: 3%;
-  flex-direction: row;
-  justify-content: space-around;
-  /* padding: 20px 10px; */
-  /* gap:5%; */
-  flex-wrap:wrap;
-  gap: 1%;
-
-}
-
-.banner-cta {
-
-  background: linear-gradient(to right, #2a5374bd), url('/doctorsmall.png');
-  padding: 5px 0 !important;
-
-}
-
-.banner-text {
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-}
-
-.banner-text p {
-  color: white !important;
-}
-
-.banner-text button {
-  padding: 10px 15px;
-  background-color: #3988C7;
-  color: white;
-}
-
-.card {
-  overflow: hidden;
-  padding: '';
-  border-radius: 10px 10px 0 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;  
-  margin-top: 3%;
-  transition: all 500ms ease-in;
-  box-shadow: inset2px 2px 5px 2px gray;
-  width:350px !important;
-}
-
-.card:hover{
-  box-shadow: inset2px 2px 5px 2px gray;
-}
-
-.card-text {
-  background-color: #3988C7;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 20px;
-  color: white;
-  height:250px;
-}
-
-.card img {
-  border-radius: 40px 40px 0 0;
-  object-fit:fill;
-}
-
-.promocard h2 {
-  font-weight: 600;
-}
-
-.icon-outline {
-  padding: 5px;
-  border: 2.5px solid #1C6097;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-}
-
-.icon-outline img {
-  margin: auto;
-}
-
-.font-Outfit {
-  font-family: Outfit;
-}
-
-.card h2 {
-  text-align: center;
-  font-weight: bold;
-  margin-top: 15px;
-  margin-bottom: 10px;
-  font-family: Outfit;
-}
-
-.img-container {
-  height: 250px;
-  overflow: hidden;
-
-
-}
-
-.card p {
-  width: 80%;
-  text-align: center;
-  margin: 0 auto;
-  font-weight: lighter;
-}
-
-.card button {
-  padding: 7px 15px;
-  background: transparent;
-  border-radius: 10px;
-  border: 1px solid white;
-  margin: 0 auto;
-  color: white;
-  margin: 0 auto;
-  margin-top: 20px;
-  transition: all 500ms ease-in;
-}
-
-.tagline .text {
-  width: 80%;
-  margin: 0 auto;
-  background-color: #04508D;
-  padding: 100px 30px;
-  padding-bottom: 90px;
-  display: flex;
-  gap: 12;
-  border-radius: 40px;
-  justify-content: space-evenly;
-  align-items: center;
-
-}
-
-.tagline .quote-text {
-  width: 62%;
-  position: relative
-}
-
-.tagline .quote-text img {
-  position: absolute;
-  top: -49px;
-  /* width: 90px; */
-  left: -10px;
-}
-
-.tagline img {}
-
-.promocard {
-  width: 300px;
-  /* height:400px; */
-  /* background:blue; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-
-
-.card button:hover {
-  background: rgba(255, 255, 255, 0.521);
-  cursor: pointer;
-
-}
-
-/** For tablet devices **/
-
-
-/** For mobile devices **/
-@media (max-width: 767px) {
   .navlinks {
+    display: flex;
+    flex-direction: row;
+    /* margin-right:100px; */
+    /* background: yellow; */
+    justify-content: flex-end;
+    padding: 10px 0px;
+    font-weight: 25px;
+
+  }
+
+  .underliner {
+    margin: 0 auto;
+    padding-top: 2px;
+  }
+
+  .active {
+    color: #3988C7;
+    border-bottom: 3px solid#3988C7;
+  }
+
+  .navlinks li {
+    margin-right: 40px;
+  }
+
+  .navlinks_mob {
     display: none;
   }
 
-  .promocard {
-    width: auto;
+
+  .hamburger_menu {
+    display: none;
   }
 
   .card-container {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 3%;
+    flex-direction: row;
+    justify-content: space-around;
+    /* padding: 20px 10px; */
+    /* gap:5%; */
     flex-wrap: wrap;
-    display:flex;
-    justify-content: space-evenly;
-    align-items: center;
+    gap: 1%;
+
+  }
+
+  .banner-cta {
+
+    background: linear-gradient(to right, #2a5374bd), url('/doctorsmall.png');
+    padding: 5px 0 !important;
+
   }
 
   .banner-text {
     display: flex;
-    flex-direction: column;
-    padding: 20px 0 !important;
+    justify-content: space-evenly;
+    flex-direction: row;
   }
 
   .banner-text p {
-    text-align: center;
+    color: white !important;
   }
 
   .banner-text button {
-    width: 150px;
-    margin: 0 auto;
-    margin-top: 4%;
+    padding: 10px 15px;
+    background-color: #3988C7;
+    color: white;
   }
 
+  .card {
+    overflow: hidden;
+    padding: '';
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    margin-top: 3%;
+    transition: all 500ms ease-in;
+    box-shadow: inset2px 2px 5px 2px gray;
+    width: 350px !important;
+  }
+
+  .card:hover {
+    box-shadow: inset2px 2px 5px 2px gray;
+  }
+
+  .card-text {
+    background-color: #3988C7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    color: white;
+    height: 250px;
+  }
+
+  .card img {
+    border-radius: 40px 40px 0 0;
+    object-fit: fill;
+  }
+
+  .promocard h2 {
+    font-weight: 600;
+  }
+
+  .icon-outline {
+    padding: 5px;
+    border: 2.5px solid #1C6097;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+
+  .icon-outline img {
+    margin: auto;
+  }
+
+  .font-Outfit {
+    /* font-family: Outfit; */
+    font-family: var(--font-outfit), sans-serif
+  }
+
+  .card h2 {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-family: var(--font-outfit), sans-serif
+  }
 
   .img-container {
-    max-height: 250px;
+    height: 250px;
+    overflow: hidden;
+
+
   }
+
+  .card p {
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 300;
+  }
+
+  .card button {
+    padding: 7px 15px;
+    background: transparent;
+    border-radius: 10px;
+    border: 1px solid white;
+    margin: 0 auto;
+    color: white;
+    margin: 0 auto;
+    margin-top: 20px;
+    transition: all 500ms ease-in;
+  }
+
   .tagline .text {
-    flex-direction:column-reverse;
-    padding: 50px 0px;
-  }
-
-   .tagline .quote-text{
-    width:80%
-   }
-  .tagline .text p{
-    margin: 0;
-  }
-
-  .tagline > .avatar{
-    width:100px;
-  }
-}
-
-/* @media (min-width: 768px) and (max-width: 1025px) { */
-@media (max-width: 1025px) {
-  .hamburger_menu {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #04508D;
+    padding: 100px 30px;
+    padding-bottom: 90px;
     display: flex;
-  }
-
-
-  .navlinks {
-    display: none;
-  }
-
-  .hero h2 {
-    font-size: 27px !important;
-    max-width: 100%;
-    padding-top: 0;
-    margin-top: 12%;
-  }
-
-  .hero p {
-    max-width: 100%;
-    font-size: 12px;
-  }
-
-  .navlinks_mob {
-    display: flex;
+    gap: 12;
+    border-radius: 40px;
+    justify-content: space-evenly;
     align-items: center;
-    flex-direction: column;
-    background: white;
-    padding: 40px 40px;
+
+  }
+
+  .tagline .quote-text {
+    width: 62%;
+    position: relative
+  }
+
+  .tagline .quote-text img {
     position: absolute;
-    inset: 0;
-    max-width: 100%;
-    height: 100vh;
-    z-index: 20;
-    top: 93px;
+    top: -49px;
+    /* width: 90px; */
+    left: -10px;
   }
 
-  .navlinks_mob li {
-    padding: 20px 100%;
+  .tagline img {}
+
+  .promocard {
+    width: 300px;
+    /* height:400px; */
+    /* background:blue; */
     display: flex;
-  }
-
-  .remove {
-    display: none !important;
-  }
-
-  .show {
-    display: flex !important;
+    flex-direction: column;
+    align-items: center;
   }
 
 
 
+  .card button:hover {
+    background: rgba(255, 255, 255, 0.521);
+    cursor: pointer;
 
-}
+  }
+
+  /** For tablet devices **/
+
+
+  /** For mobile devices **/
+  @media (max-width: 767px) {
+    .navlinks {
+      display: none;
+    }
+
+    .promocard {
+      width: auto;
+    }
+
+    .card-container {
+      flex-wrap: wrap;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    .banner-text {
+      display: flex;
+      flex-direction: column;
+      padding: 20px 0 !important;
+    }
+
+    .banner-text p {
+      text-align: center;
+    }
+
+    .banner-text button {
+      width: 150px;
+      margin: 0 auto;
+      margin-top: 4%;
+    }
+
+
+    .img-container {
+      max-height: 250px;
+    }
+
+    .tagline .text {
+      flex-direction: column-reverse;
+      padding: 50px 0px;
+    }
+
+    .tagline .quote-text {
+      width: 80%
+    }
+
+    .tagline .text p {
+      margin: 0;
+    }
+
+    .tagline>.avatar {
+      width: 100px;
+    }
+  }
+
+  /* @media (min-width: 768px) and (max-width: 1025px) { */
+  @media (max-width: 1025px) {
+    .hamburger_menu {
+      display: flex;
+    }
+
+
+    .navlinks {
+      display: none;
+    }
+
+    .hero h2 {
+      font-size: 27px !important;
+      max-width: 100%;
+      padding-top: 0;
+      margin-top: 12%;
+    }
+
+    .hero p {
+      max-width: 100%;
+      font-size: 12px;
+    }
+
+    .navlinks_mob {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      background: white;
+      padding: 40px 40px;
+      position: absolute;
+      inset: 0;
+      max-width: 100%;
+      height: 100vh;
+      z-index: 20;
+      top: 93px;
+    }
+
+    .navlinks_mob li {
+      padding: 20px 100%;
+      display: flex;
+    }
+
+    .remove {
+      display: none !important;
+    }
+
+    .show {
+      display: flex !important;
+    }
+
+
+
+
+  }

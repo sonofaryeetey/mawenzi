@@ -10,6 +10,7 @@ export default function Home() {
     
     <div>
       <main className="">
+        
         <HeroSection/>
         <Services/>
         <BannerCta/>

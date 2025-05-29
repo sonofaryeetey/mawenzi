@@ -4,6 +4,7 @@ import HeroButton from './HeroButton'
 const HeroSection = () => {
   return (
     <div className='hero'>
+      <div className="bg-shape"></div>
         <div className="hero-text max-width ">
             <h2 className='font-medium text-white text-4xl  pt-10'><span className='alt-color font-extrabold'>Revolutionizing</span> Healthcare with Coordinated Care and Innovative Solutions for Patients
 and Providers.</h2>

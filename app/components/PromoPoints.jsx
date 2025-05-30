@@ -26,7 +26,7 @@ const promoInfo=[
             title: `Care Coordination`,
             info: `Our team ensures that patients receive continuous, coordinated care throughout their
                    healthcare journey, reducing fragmentation and improving outcomes.`,
-            image: `/care_cordination.jpg`,
+            image: `/care_cordination2.jpg`,
             icon: `/network.png`
      
         },

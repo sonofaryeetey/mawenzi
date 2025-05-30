@@ -9,40 +9,41 @@ const Navbar = () => {
         { name: "Home", link: "/", label: "Home" },
         { name: "About", link: "/About", label: "About" },
         { name: "Services", link: "/Services", label: "Services" },
-        { name: "Contact", link: "/Contact", label: "Contact" }
+        { name: "Contact", link: "/Contact", label: "Contact" },
+        { name: "Learn More", link: "/Contact", label: "learn more" }
 
     ]
     const pathname = usePathname()
-    const[state, setState]=useState(false)
-    const ToggleMenu= ()=>setState(!state)
+    const [state, setState] = useState(false)
+    const ToggleMenu = () => setState(!state)
 
     return (
 
         <nav>
             <Link href="/">
                 <Image
-                src={"/mawenzi_logo.png"}
-                width={100}
-                height={100}
-                alt='logo'
+                    src={"/mawenzi_logo.png"}
+                    width={100}
+                    height={100}
+                    alt='logo'
 
                 />
             </Link>
-            <div className={`hamburger_menu  ${state?"remove":""}`} onClick={ToggleMenu}>
+            <div className={`hamburger_menu  ${state ? "remove" : ""}`} onClick={ToggleMenu}>
                 <Image
-                src={"/hamburger_menu.png"}
-                width={40}
-                height={40}
-                alt='menu'
+                    src={"/hamburger_menu.png"}
+                    width={40}
+                    height={40}
+                    alt='menu'
 
                 />
             </div>
-            <div className={`hamburger_menu ${!state?'remove':""}`} onClick={ToggleMenu} >
+            <div className={`hamburger_menu ${!state ? 'remove' : ""}`} onClick={ToggleMenu} >
                 <Image
-                src={"/close.png"}
-                width={50}
-                height={20}
-                alt='close'
+                    src={"/close.png"}
+                    width={50}
+                    height={20}
+                    alt='close'
 
                 />
             </div>
@@ -50,25 +51,26 @@ const Navbar = () => {
 
             <ul className='navlinks'>
                 {NavLinks.map((nav) => (
-                    <li key={nav.label} className={pathname==nav.link?"active": ""} >
+                    <li key={nav.label} className={`${pathname === nav.link ? "active" : ""} ${nav.name === "Learn More" ? "cta" : ""
+                        }`} >
                         <Link href={nav.link} >
                             {nav.name}
                         </Link>
-                    </li>                
-            ))}                
+                    </li>
+                ))}
             </ul>
-            <ul className={`navlinks_mob ${!state?"remove":""}`}>
+            <ul className={`navlinks_mob ${!state ? "remove" : ""} `}>
                 {NavLinks.map((nav) => (
-                    <li key={nav.label} className={pathname==nav.link?"active": ""} onClick={ToggleMenu}>
-                        <Link href={nav.link} onClick={()=>setState(true)} >
+                    <li key={nav.label} className={`${pathname == nav.link ? "active" : ""} ${nav.name=='Learn More' ? "remove" : ""}`} onClick={ToggleMenu}>
+                        <Link href={nav.link} onClick={() => setState(true)} >
                             {nav.name}
                         </Link>
-                    </li>                
-            ))}                
+                    </li>
+                ))}
             </ul>
-             
+
         </nav>
-        
+
     )
 }
 

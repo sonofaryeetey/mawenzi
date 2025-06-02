@@ -36,9 +36,10 @@ export default function RootLayout({ children }) {
         className={`${outfit.variable} ${inter.variable}  antialiased`}
       >
         <Navbar/>
-        {children}
+        {children} 
+        <Footer/>
       </body>
-      <Footer/>
+     
     </html>
   );
 }

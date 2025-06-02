@@ -1,8 +1,15 @@
 import React from 'react'
+import CustomHero from '../components/CustomHero'
 
 const Contact = () => {
+   const pageInfo =
+  {
+    name: 'Contact Us',
+    image: '/Contact-us.jpeg',
+  }
+
   return (
-    <div>Contact</div>
+    <div><CustomHero props={pageInfo}/></div>
   )
 }
 

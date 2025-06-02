@@ -69,8 +69,8 @@
     cursor: pointer;
   }
 
-  .herobutton:hover{
-    background:#3988C7;
+  .herobutton:hover {
+    background: #3988C7;
   }
 
   .alt-color {
@@ -107,44 +107,51 @@
     padding-top: 2px;
   }
 
-  
+
 
   .navlinks li {
     margin-right: 30px;
-    color:rgb(95, 95, 95);
+    color: rgb(95, 95, 95);
     font-weight: 400;
-     font-family:  var(--font-outfit), sans-serif;
-     transition:all 200ms ease-in-out;
+    font-family: var(--font-outfit), sans-serif;
+    transition: all 200ms ease-in-out;
   }
 
-  .navlinks li:hover{
-    color:#3988C7;
-    
+  .navlinks li:hover {
+    color: #3988C7;
+
   }
 
-  .cta{
-    background:#1C6097;
-    color:white !important;
-    padding: 10px 20px;
-    border-radius: 10px;
-    margin-left:20px;
-    margin-top:-10px;
-    transition: all 300ms ease-in-out;
-    
+  .primary-col {
+    color: #3988C7;
   }
-
-  .cta:hover{
-    background: #349aee;
-  }
-
-
-
-  
 
   .active {
     color: #3988C7 !important;
     border-bottom: 3px solid#3988C7;
   }
+
+  .cta {
+    background: #1C6097;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-top: -10px;
+    transition: all 300ms ease-in-out;
+    border: none !important;
+
+  }
+
+  .cta:hover {
+    background: #349aee;
+  }
+
+
+
+
+
+
 
   .navlinks_mob {
     display: none;
@@ -216,14 +223,14 @@
     margin-top: 3%;
     transition: all 800ms ease-in-out;
     /* box-shadow: inset 2px 2px 5px 2px gray; */
-    width: 350px ;
+    width: 350px;
   }
 
   .card:hover {
-    width:300px ;
+    width: 300px;
   }
 
-  
+
 
   .card-text {
     background-color: #3988C7;
@@ -240,9 +247,7 @@
     object-fit: fill;
   }
 
-  .card img:hover{
-    
-  }
+  .card img:hover {}
 
   .promocard h2 {
     font-weight: 600;
@@ -273,17 +278,17 @@
   .quick-links h2 {
     font-weight: 600;
     font-family: var(--font-outfit), sans-serif;
-    position:relative;
-    padding-bottom:5px;
-    margin-bottom:12px;
+    position: relative;
+    padding-bottom: 5px;
+    margin-bottom: 12px;
   }
 
   .quick-links h2::before {
-    content:" ";
+    content: " ";
     width: 30px;
-    height:2px;
-    background:rgb(194, 126, 0);
-    position:absolute;
+    height: 2px;
+    background: rgb(194, 126, 0);
+    position: absolute;
     bottom: -1px;
   }
 
@@ -374,6 +379,47 @@
   .card button:hover {
     background: rgba(255, 255, 255, 0.521);
     cursor: pointer;
+
+  }
+
+  .custom-hero {
+    height: 400px;
+    background: #000;
+    position: relative;
+
+  }
+
+  .custom-hero img {
+    z-index: 1;
+  }
+
+  .overlay-text {
+    position: relative;
+    color: white;
+    font-family: var(--font-outfit), sans-serif;
+    z-index: 99;
+    padding: 20px 10px;
+  }
+
+
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.493);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .blur {
+    position: absolute;
+    inset: 0;
+    background-color: #0a0a0a85;
+    filter: blur(40px);
+    z-index: -1;
 
   }
 
@@ -487,8 +533,9 @@
     .navlinks_mob li {
       padding: 20px 100%;
       display: flex;
-      border-bottom:0px solid transparent !important;
+      border-bottom: 0px solid transparent !important;
     }
+
 
     .remove {
       display: none !important;

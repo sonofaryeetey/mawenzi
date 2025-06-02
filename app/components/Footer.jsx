@@ -69,7 +69,7 @@ const Footer = () => {
                                 src={'/X.png'}
                                 width={25}
                                 height={25}
-                                alt="whatsapp"
+                                alt="X"
                             />
                         </Link>
                         <Link href={'/'}>

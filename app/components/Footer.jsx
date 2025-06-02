@@ -56,7 +56,7 @@ const Footer = () => {
                                 alt="facebook"
                             />
                         </Link>
-                        <Link href={'#'}>
+                        <Link href={'https://www.instagram.com'}>
                             <Image
                                 src={'/Instagram.png'}
                                 width={25}
@@ -64,7 +64,7 @@ const Footer = () => {
                                 alt="instragram"
                             />
                         </Link>
-                        <Link href={'/'}>
+                        <Link href={'https://www.x.com'}>
                             <Image
                                 src={'/X.png'}
                                 width={25}
@@ -80,14 +80,7 @@ const Footer = () => {
                                 alt="whatsapp"
                             />
                         </Link>
-                        <Link href={'/'}>
-                            <Image
-                                src={'/facebook.png'}
-                                width={25}
-                                height={25}
-                                alt="facebook"
-                            />
-                        </Link>
+                       
                         </div>
                     </div>
                 </div>

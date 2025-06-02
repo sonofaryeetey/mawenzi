@@ -75,7 +75,7 @@ const Footer = () => {
                         
                         <Link href={'/'}>
                             <Image
-                                src={'/Whatsapp.png'}
+                                src={'/aw.png'}
                                 width={25}
                                 height={25}
                                 alt="whatsapp"

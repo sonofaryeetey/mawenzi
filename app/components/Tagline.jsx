@@ -12,6 +12,7 @@ const Tagline = () => {
                         src={'/quote.png'}
                         width={50}
                         height={50}
+                        alt='quote'
                     />
                     <p className='avatar font-sm text-white mr-20'>{`Empowering Providers, Transforming Care to improve the health and well-being of underserved communities by expanding access to
                     comprehensive, coordinated care, and empowering healthcare providers with the tools to deliver effective, patient-centered care.`} </p>

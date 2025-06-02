@@ -72,6 +72,7 @@ const Footer = () => {
                                 alt="X"
                             />
                         </Link>
+                        
                         <Link href={'/'}>
                             <Image
                                 src={'/Whatsapp.png'}
@@ -80,7 +81,6 @@ const Footer = () => {
                                 alt="whatsapp"
                             />
                         </Link>
-                       
                         </div>
                     </div>
                 </div>

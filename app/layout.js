@@ -31,6 +31,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+      </head>
       <body
         // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         className={`${outfit.variable} ${inter.variable}  antialiased`}
@@ -39,7 +42,6 @@ export default function RootLayout({ children }) {
         {children} 
         <Footer/>
       </body>
-     
     </html>
   );
 }

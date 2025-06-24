@@ -19,19 +19,19 @@ const Contact = () => {
             <h2 className="text-3xl font-Outfit font-bold mb-4">Contact Us</h2>
             <p className="mb-6 text-base font-light">If you have any questions about this Privacy Policy or our data practices, please contact us at:</p>
             <div className="mb-4">
-              <div className="mb-2 font-semibold">Mawenzi Health</div>
-              <div className="mb-2">3 Columbus Circle, 15th Floor, New York, NY 10019</div>
-              <div className="mb-2">Support@mawenzihealth.com</div>
-              <div className="mb-2"><a href="tel:3472613722" className="text-blue-600 hover:underline">3472613722</a></div>
+              <div className="mb-2 font-semibold flex items-center gap-2 mr-4">Mawenzi Health</div>
+              <div className="mb-2 flex items-center gap-2"><span className="material-icons text-blue-600">place</span>3 Columbus Circle, 15th Floor, New York, NY 10019</div>
+              <div className="mb-2 flex items-center gap-2"><span className="material-icons text-blue-600">email</span>Support@mawenzihealth.com</div>
+              <div className="mb-2 flex items-center gap-2"><span className="material-icons text-blue-600">phone</span><a href="tel:3472613722" className="text-blue-600 hover:underline">3472613722</a></div>
             </div>
-            <div className="flex items-center gap-2 mb-2">
-              <span className="material-icons text-lg">email</span>
+            {/* <div className="flex items-center gap-2 mb-2">
+              <span className="material-icons text-blue-600">email</span>
               <span>Support@mawenzihealth.com</span>
-            </div>
-            <div className="flex items-center gap-2 mb-2">
-              <span className="material-icons text-lg">phone</span>
+            </div> */}
+            {/* <div className="flex items-center gap-2 mb-2">
+              <span className="material-icons text-blue-600">phone</span>
               <a href="tel:3472613722" className="text-blue-600 hover:underline">3472613722</a>
-            </div>
+            </div> */}
             <p className="mt-6 text-xs opacity-80">
               By continuing to use our services, you acknowledge that you have read and understood this 
               <button type="button" className="text-blue-600 underline ml-1 hover:text-blue-800" onClick={() => setShowPrivacy(true)}>

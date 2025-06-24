@@ -71,8 +71,8 @@ const PromoPoints = () => {
                         />
         <div className='flex justify-center gap-4 flex-wrap'>
                 
-            {promoInfo.map((prom)=>(
-                    <PromoCard key={prom.title} props={prom}/>
+            {promoInfo.map((prom, index)=>(
+                    <PromoCard key={prom.title} props={prom} index={index}/>
             ))}
        
         </div>

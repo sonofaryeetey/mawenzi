@@ -12,11 +12,11 @@ const Contact = () => {
   return (
     <div>
       <CustomHero props={pageInfo} />
-      <section className="w-full min-h-[80vh] flex items-center justify-center py-16 px-2" style={{ background: 'white' }}>
+      <section className="w-full min-h-[80vh] flex items-center justify-center py-16 px-2" style={{ background: '#F0F4F8' }}>
         <div className="max-w-5xl w-full flex flex-col md:flex-row gap-10 items-stretch justify-center">
           {/* Left: Contact Info */}
-          <div className="flex-1 text-black flex flex-col justify-center md:pr-8 mb-8 md:mb-0">
-            <h2 className="text-3xl font-Outfit font-bold mb-4">Contact Us</h2>
+          <div className="flex-1 text-black flex flex-col justify-center md:pr-8 mb-8 md:mb-0 px-4 py-2">
+            <h2 className="text-3xl font-Outfit font-bold mb-4 bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">Contact Us</h2>
             <p className="mb-6 text-base font-light">If you have any questions about this Privacy Policy or our data practices, please contact us at:</p>
             <div className="mb-4">
               <div className="mb-2 font-semibold flex items-center gap-2 mr-4">Mawenzi Health</div>

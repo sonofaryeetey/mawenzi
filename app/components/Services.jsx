@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import CardServices from './CardServices'
 
@@ -151,8 +151,8 @@ const HomeServices = () => {
         <p className='para' >{`At Mawenzi Health, we provide comprehensive healthcare support services designed to improve
 patient outcomes, streamline operations, and reduce healthcare costs. Our solutions include:`}</p>
         <div className="card-container">
-          {homepageCardinfo.map((cardinf) => (
-            <CardServices key={cardinf.title} props={cardinf} />
+          {homepageCardinfo.map((cardinf, index) => (
+            <CardServices key={cardinf.title} props={cardinf} index={index} />
           ))}
         </div>
 
@@ -165,6 +165,43 @@ patient outcomes, streamline operations, and reduce healthcare costs. Our soluti
 const Services = () => {
   const [selectedService, setSelectedService] = useState(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [animatedSections, setAnimatedSections] = useState({
+    header: false,
+    services: false,
+    info: false,
+    benefits: false
+  });
+
+  useEffect(() => {
+    // Intersection Observer for section animations
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const sectionId = entry.target.dataset.section;
+            if (sectionId) {
+              setAnimatedSections(prev => ({
+                ...prev,
+                [sectionId]: true
+              }));
+            }
+          }
+        });
+      },
+      {
+        threshold: 0.2,
+        rootMargin: '0px 0px -100px 0px'
+      }
+    );
+
+    // Observe sections
+    const sections = document.querySelectorAll('[data-section]');
+    sections.forEach(section => observer.observe(section));
+
+    return () => {
+      sections.forEach(section => observer.unobserve(section));
+    };
+  }, []);
 
   const handleCardClick = (service) => {
     setSelectedService(service)
@@ -178,16 +215,18 @@ const Services = () => {
 
   return (
     <section className="max-width">
-      <div className="services">
-        <h2 className="font-Outfit text-gray-600 font-medium text-3xl text-center">WHAT WE <span className="font-extralight">DO</span></h2>
-        <Image className="underliner" src={'/underliner.png'} width={100} height={20} alt={'underliner'} />
-        <p className="para">
+      <div className={`services services-section ${animatedSections.header ? 'animate-header-in' : ''}`} data-section="header">
+        <h2 className={`font-Outfit text-gray-600 font-medium text-3xl text-center services-title ${animatedSections.header ? 'animate-title-in' : ''}`}>
+          WHAT WE <span className="font-extralight">DO</span>
+        </h2>
+        <Image className={`underliner services-underline ${animatedSections.header ? 'animate-underline-in' : ''}`} src={'/underliner.png'} width={100} height={20} alt={'underliner'} />
+        <p className={`para services-description ${animatedSections.header ? 'animate-description-in' : ''}`}>
           At Mawenzi Health, we provide a suite of comprehensive healthcare support services tailored to improve patient outcomes, streamline operations, and reduce healthcare costs. Our solutions are designed to assist healthcare providers in delivering high-quality care while ensuring patients receive the attention and support they need.
         </p>
-        <div className="service-card-grid">
-          {serviceCards.map(card => (
+        <div className={`service-card-grid services-grid ${animatedSections.services ? 'animate-grid-in' : ''}`} data-section="services">
+          {serviceCards.map((card, index) => (
             <div 
-              className="service-card" 
+              className={`service-card service-card-animated ${animatedSections.services ? `animate-service-card-${index}` : ''}`}
               key={card.title}
               onClick={() => handleCardClick(card)}
             >
@@ -206,7 +245,7 @@ const Services = () => {
         onClose={closeModal} 
         service={selectedService} 
       />
-      <section className="service-info-section">
+      <section className={`service-info-section info-section ${animatedSections.info ? 'animate-info-in' : ''}`} data-section="info">
         <div className="service-info-grid">
           <div className="service-info-img">
             <Image src="/mawenzi_trust.jpg" width={600} height={420} alt="Why Choose Mawenzi Health" style={{borderRadius: '30px'}} />
@@ -222,7 +261,7 @@ const Services = () => {
         </div>
       </section>
       {/* Benefits for Healthcare Providers Section (Discover Grid Style) */}
-      <section className="discover-services-section">
+      <section className={`discover-services-section benefits-section ${animatedSections.benefits ? 'animate-benefits-in' : ''}`} data-section="benefits">
         <h2 className="discover-services-title">Benefits for Healthcare Providers</h2>
         <div className="discover-section-img">
           <Image src="/happy_labtec.jpg" width={600} height={220} alt="Benefits for Healthcare Providers" style={{borderRadius: '18px', margin: '0 auto'}} />

@@ -717,19 +717,39 @@
 
   .modal-content {
     background: white;
-    border-radius: 20px;
-    padding: 2.5rem;
-    max-width: 600px;
-    width: 90%;
-    max-height: 80vh;
+    border-radius: 32px;
+    padding: 3.5rem;
+    max-width: 800px;
+    width: 95%;
+    max-height: 85vh;
     overflow-y: auto;
     position: relative;
     transform: translateY(-20px);
     transition: transform 0.3s ease;
+    box-shadow: 0 8px 40px rgba(59,130,246,0.13), 0 1.5px 8px rgba(0,0,0,0.04);
+    border: 1.5px solid #e0eaff;
   }
 
   .modal-overlay.active .modal-content {
     transform: translateY(0);
+  }
+
+  /* Custom scrollbar for modal-content */
+  .modal-content::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+  }
+  .modal-content::-webkit-scrollbar-thumb {
+    background: #cbe6f7;
+    border-radius: 8px;
+    border: 2px solid #f4faff;
+  }
+  .modal-content::-webkit-scrollbar-thumb:hover {
+    background: #a7d8ef;
+  }
+  .modal-content {
+    scrollbar-width: thin;
+    scrollbar-color: #cbe6f7 #f4faff;
   }
 
   .modal-close {
@@ -758,27 +778,35 @@
   .modal-header {
     display: flex;
     align-items: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     padding-right: 2rem;
+    border-bottom: 1.5px solid #e0eaff;
+    padding-bottom: 1.2rem;
+    background: white;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
   }
 
   .modal-icon {
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 1rem;
+    margin-right: 1.2rem;
     flex-shrink: 0;
+    background: #e7f4f5;
+    box-shadow: 0 2px 8px rgba(59,130,246,0.07);
   }
 
   .modal-title {
     font-family: var(--font-outfit), sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #222;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1e293b;
     margin: 0;
+    letter-spacing: -1px;
   }
 
   .modal-body {
